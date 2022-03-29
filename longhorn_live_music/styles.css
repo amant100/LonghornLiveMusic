@@ -196,3 +196,24 @@ iframe {
   transition: all 0.2s ease-in-out;
   transform: scale(1.05);
 }
+
+#feedback-form {
+  float: right;
+  width: 86%;
+  display: grid;
+}
+
+#submit,
+#clear {
+  font-family: "Poppins", sans-serif;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  background-color: #bf5700;
+  border: none;
+  border-radius: 4px;
+  padding: 16px 32px;
+  margin: 4px 2px;
+  width: 20em;
+  cursor: pointer;
+}
