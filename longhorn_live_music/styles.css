@@ -131,7 +131,7 @@ iframe {
 .circle-txt {
   /* (E1) CENTER TEXT IN CIRCLE */
   position: absolute;
-  bottom: 50%;
+  bottom: 40%;
   width: 100%;
   text-align: center;
 
@@ -140,33 +140,39 @@ iframe {
   font-weight: bold;
 }
 
+#circle_span {
+  line-height: normal;
+  display: inline-block;
+  vertical-align: middle;
+}
+
 #circle_1 {
   position: absolute;
-  left: 400px;
+  left: 600px;
   top: 120px;
 }
 
 #circle_2 {
   position: absolute;
-  left: 750px;
+  left: 1100px;
   top: 320px;
 }
 
 #circle_3 {
   position: absolute;
-  left: 400px;
+  left: 600px;
   top: 520px;
 }
 
 #circle_4 {
   position: absolute;
-  left: 750px;
+  left: 1100px;
   top: 720px;
 }
 
 #circle_5 {
   position: absolute;
-  left: 400px;
+  left: 600px;
   top: 920px;
 }
 
