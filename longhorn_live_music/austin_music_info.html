@@ -53,5 +53,50 @@
 		<div class="res-circle" id="circle_5">
 			<div class="circle-txt"><span id="circle_span">Many local artists and bands have their roots in Austin's local venues, making our city a welcoming place for anyone interested in checking out unique sound.</span></div>
 		</div>
+		<div class="submitter" id="submitter">
+				<div class="post_header">
+				<h3>
+					Post a fact!
+				</h3>
+				<span>Submit a fact (for review) to possibly get added to this page!</span><br><br>
+				</div>
+				<div class="post_body">
+				<form method="POST" action="HW10.php">
+					<table class="submissions">
+						<tr>
+							<td class="left_col">
+								Post:
+							</td>
+							<td>
+								<input type="text" name="content" class='content' required/>
+							</td>
+						</tr>
+						<tr>
+							<td class="left_col">
+								Your Name:<br>(optional)
+							</td>
+							<td>
+								<input type="text" name="name"/>
+							</td>
+						</tr>
+						<tr>
+							<td class="left_col">
+								Source:<br>(optional)
+							</td>
+							<td>
+								<input type="text" name="source"/>
+							</td>
+						</tr>
+						<tr>
+							<td>
+        						<input id='post_clear' type="reset" value="Clear">
+							</td>
+							<td>
+								<input id='post_submit' type="submit" name="Submit"/>
+							</td>
+						</tr>
+					</table></div>
+				</form>
+		</div>
   </body>
 </html>
