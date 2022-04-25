@@ -140,6 +140,48 @@ iframe {
   font-weight: bold;
 }
 
+table.submissions{
+  border-spacing: 10px;
+  width: 50vw;
+  border: 1px solid;
+}
+.left_col{
+  text-align: right;
+  width: 12vw;
+}
+.content{
+  width: 22vw;
+  height: 80px;
+}
+
+#post_clear{
+  position: absolute;
+  left: 15vw;
+  top: 400px;
+  margin: 15px;
+  padding: 10px;
+}
+#post_submit{
+  position: absolute;
+  left: 27vw;
+  top: 400px;
+  margin: 15px;
+  padding: 10px;
+}
+.submitter {
+  left: 34vw;
+  top: 1200px;
+  position: absolute;
+}
+
+.post_header{
+text-align: center;
+}
+.post_body{
+text-align: left;
+width: 100%;
+}
+
 #circle_span {
   line-height: normal;
   display: inline-block;
