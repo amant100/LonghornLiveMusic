@@ -77,10 +77,17 @@
 		</table>
 		<div id="feedback-form">
 			<h4>Provide us with feedback on your experience with Longhorn Live Music!</h4>
-			<label>Email: <input type="text" size="35" id="email"/></label>
-			<label>Feedback: <textarea id="feedback" cols="30" rows="10"></textarea></label>
-			<button id="submit">Submit</button>
+			<table class="feedback_table"><tr>
+				<td class="left_col">Email:</td>
+				<td class="right_col"><input type="text" size="35" id="email"/></td>
+				</tr><tr>
+				<td class="left_col">Feedback:</td>
+				<td class="right_col"><textarea id="feedback" cols="30" rows="10"></textarea></td>
+			</tr></table>
+			<div class="feedback_buttons">
+			<button id="submit">Submit</button><br>
 			<button id="clear">Clear</button>
+			</div>
 		</div>
     <div class="footer">
       <script>document.write(new Date().toLocaleDateString());</script>
