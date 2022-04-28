@@ -34,6 +34,13 @@ table {
   float: right;
 }
 
+table.feedback_table {
+  border-spacing: 20px;
+  width: 50%;
+  float: right;
+  border: 0px solid black;
+}
+
 td {
   text-align: center;
 }
@@ -140,38 +147,94 @@ iframe {
   font-weight: bold;
 }
 
+#info_body{padding-bottom: 1740px;}
+
+/* stuff for the post a fact box */
 table.submissions{
   border-spacing: 10px;
   width: 50vw;
-  border: 1px solid;
+  border: 0px solid;
+  margin-bottom: 10px;
 }
 .left_col{
   text-align: right;
   width: 12vw;
+  vertical-align: top;
+  font-size: 15px;
 }
+.right_col{
+  text-align: left;
+  vertical-align: top;
+}
+
 .content{
   width: 22vw;
   height: 80px;
+  border: 1px solid #000000;
+  outline: 1px solid black;
+  border-radius: 4px;
+}
+.content:focus{
+  outline: 2px solid #bf5700;
+  border-radius: 4px;
+}
+.name:focus,
+.source:focus{
+  outline: 2px solid #bf5700;
+  border-radius: 4px;
+  height: 20px;
+  padding-left: 5px;
+}
+
+.name,.source{
+  border-radius: 4px;
+  border: 1px solid #000000;
+  outline: 1px solid black;
+  height: 20px;
+  font-size: 15px;
+  padding-left: 3px;
+}
+.name:hover,.source:hover,.content:hover {
+  background-color : #fff4ea;
 }
 
 #post_clear{
-  position: absolute;
-  left: 15vw;
-  top: 400px;
-  margin: 15px;
+  margin: 5px;
   padding: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 #post_submit{
-  position: absolute;
-  left: 27vw;
-  top: 400px;
-  margin: 15px;
+  margin: 5px;
   padding: 10px;
 }
+.post_buttons{
+  border: 0px solid black;
+  text-align: left;
+}
+.poster_buttons:hover{
+  background: #bf5700;
+  border-radius: 5px;
+  color: white;
+  border: 2px solid #ffffff;
+  text-align: left;
+  transition: .3s;
+  cursor:pointer;
+}
+
+.poster_buttons{
+  background: #ffffff;
+  border-radius: 5px;
+  color: rgb(0, 0, 0);
+  border: 2px solid #000000;
+  text-align: left;
+}
+
 .submitter {
   left: 34vw;
-  top: 1200px;
+  top: 1260px;
   position: absolute;
+  background-color: #ffdcbc
 }
 
 .post_header{
@@ -217,7 +280,7 @@ width: 100%;
   left: 36vw;
   top: 920px;
 }
-
+/*-----------------------------------------------------*/
 .grid {
   float: right;
   width: 86%;
@@ -249,7 +312,11 @@ width: 100%;
   float: right;
   width: 86%;
   display: grid;
+  left: 15vw;
+  position: relative;
 }
+.feedback_buttons{margin-left: 13vw;}
+
 
 #submit,
 #clear {
