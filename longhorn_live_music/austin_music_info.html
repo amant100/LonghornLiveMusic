@@ -10,6 +10,34 @@
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<script language="javascript" type="text/javascript" defer>
+      function ajaxFunction(){
+        // Initialize an AJAX request
+        let ajaxRequest = new XMLHttpRequest();
+                
+        // Create a function that will receive data sent from the server and update the span in the same page
+        ajaxRequest.onreadystatechange = function() {
+          if(ajaxRequest.readyState == 4){
+            let ajaxDisplay       = document.getElementById("message");
+            ajaxDisplay.innerHTML = ajaxRequest.responseText;
+          }
+        }
+        
+        // Get the values from the input fields
+				let content = document.getElementById("content").value;
+        let contributor_name = document.getElementById("contributor_name").value;
+				let source = document.getElementById("source").value;
+
+        // Build the string
+				let submissionString = "?content=" + content;
+        submissionString    += "&contributor_name=" + contributor_name;
+				submissionString    += "&source=" + source;
+                
+        // Pass the values to the server script
+        ajaxRequest.open("GET", "submission.php" + submissionString, true);
+        ajaxRequest.send(null);
+      }
+    </script>
 	</head>
   <body>
 		<div class="sidenav">
@@ -58,14 +86,14 @@
 				<span>Submit a fact (for review) to possibly get added to this page!</span><br><br>
 				</div>
 				<div class="post_body">
-				<form method="POST" action="submission.php">
+				<form method="POST">
 					<table class="submissions">
 						<tr>
 							<td class="left_col">
 								Post:
 							</td>
 							<td class="right_col">
-								<textarea type="text" name="content" rows="0" cols="60" class='content' required></textarea>
+								<textarea type="text" name="content" rows="0" cols="60" class='content' id="content" required></textarea>
 							</td>
 						</tr>
 						<tr>
@@ -73,7 +101,7 @@
 								Your Name:<br>
 							</td>
 							<td class="right_col">
-								<input type="text" name="name" class="name" required/>
+								<input type="text" name="name" class="name" id="contributor_name" required/>
 							</td>
 						</tr>
 						<tr>
@@ -81,7 +109,7 @@
 								Source:<br>
 							</td>
 							<td class="right_col">
-								<input type="text" name="source" class='source' required/>
+								<input type="text" name="source" class='source' id="source" required/>
 							</td>
 						</tr>
 						<tr>
@@ -90,8 +118,12 @@
 							<td class="post_buttons">
 								&emsp;&emsp;&emsp;&emsp;<input class='poster_buttons' id='post_clear' type="reset" value="Clear">
 								&emsp;&emsp;
-								<input id='post_submit' class='poster_buttons' type="submit" name="Submit"/>
+								<input id='post_submit' class='poster_buttons' type="button" onclick="ajaxFunction()" name="Submit" value="Submit"/>
 							</td>
+						</tr>
+						<tr class="message_row">
+							<td><span id="message"></span></td>
+							<td></td>
 						</tr>
 					</table></div>
 				</form>
