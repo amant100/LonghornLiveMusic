@@ -16,8 +16,14 @@
   $contributor_name   = $_GET["contributor_name"];
   $source             = $_GET["source"];
 
-  $query = "INSERT INTO submissions (content, contributor_name, source) VALUES ('$content', '$contributor_name', '$source')";
-  $mysqli->query($query) or die($mysqli->error);
-  echo "Thank you for your fact!";
-  mysqli_close($mysqli);
+  if (isset($_COOKIE["submitted"])) {
+    echo "Please wait to submit another fact.";
+  } else {
+    $query = "INSERT INTO submissions (content, contributor_name, source) VALUES ('$content', '$contributor_name', '$source')";
+    $mysqli->query($query) or die($mysqli->error);
+    echo "Thank you for your fact!";
+    mysqli_close($mysqli);
+  
+    setcookie("submitted", $contributor_name, time() + 600);
+  }
 ?>
