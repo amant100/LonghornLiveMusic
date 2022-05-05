@@ -43,6 +43,7 @@ table.feedback_table {
 
 td {
   text-align: center;
+  vertical-align: top;
 }
 
 .footer {
@@ -335,4 +336,9 @@ width: 100%;
   margin: 4px 2px;
   width: 20em;
   cursor: pointer;
+}
+
+.dev_pics {
+  width: 1em;
+  height: 1em;
 }
