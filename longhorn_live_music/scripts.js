@@ -1,3 +1,18 @@
+$(document).ready(function () {
+  function changeOrange(event) {
+    event.target.style.color = "#bf5700";
+  }
+  function changeBlack(event) {
+    event.target.style.color = "black";
+  }
+
+  $(".header-outside").mouseover(changeOrange);
+  $(".header-outside").mouseout(changeBlack);
+
+  $(".header-inside").mouseover(changeOrange);
+  $(".header-inside").mouseout(changeOrange);
+});
+
 var submitButton = document.getElementById("submit");
 submitButton.addEventListener("click", validateInput);
 

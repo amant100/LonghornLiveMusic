@@ -10,6 +10,8 @@
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
+		<script src="scripts.js"></script>
 	</head>
 	<body>
 		<div class="sidenav">
@@ -32,22 +34,26 @@
 		</div>
 		<div class="header">
 			<img src="live_logo.png" alt="Longhorn Live Music Logo" class="center" id="logo">
-			<p>Longhorn<span id="live"> Live</span> Music</p>
+			<p class="header-outside">Longhorn<span id="live" class="header-inside"> Live</span> Music</p>
 		</div>
 		<table class="center">
 			<tr>
 				<td>
 					<p>Longhorn Live Music is an informational hub for local Austin music and a tribute to the spirit of music as a whole. We serve to provide a resource for different aspects of the local Austin music scene and to inspire individuals in our community. Here you can find information on local shows and events, profiles on local artists and bands, and more!</p>
 				</td>
+				<td>
+					<img src="austin.jpg" id="austin">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<!-- <p>Longhorn Live Music is an informational hub for local Austin music and a tribute to the spirit of music as a whole. We serve to provide a resource for different aspects of the local Austin music scene and to inspire individuals in our community. Here you can find information on local shows and events, profiles on local artists and bands, and more!</p> -->
+					<p>Click on the play button to the right to check out a playlist full of some of the amazing music that has come from this amazing city!</p>
+				</td>
 				<td id="spo">
 					<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/6dUHUbJHSGsRiVrV7mURM8?utm_source=generator&theme=0" width="100%" height=auto frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
 				</td>
 			</tr>
 		</table>
-		<br>
-		<div class="footer">
-			<script>document.write(new Date().toLocaleDateString());</script>
-			&emsp;-&emsp;Team 19
-		</div>
 	</body>
 </html>

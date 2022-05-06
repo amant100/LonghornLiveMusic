@@ -12,9 +12,13 @@
   }
   $mysqli->select_db($dbName) or die($mysqli->error);
 
-  $content            = $_GET["content"];
-  $contributor_name   = $_GET["contributor_name"];
-  $source             = $_GET["source"];
+  $content          = $_GET["content"];
+  $contributor_name = $_GET["contributor_name"];
+  $source           = $_GET["source"];
+
+  $content          = $mysqli->real_escape_string($content);
+  $contributor_name = $mysqli->real_escape_string($contributor_name);
+  $source           = $mysqli->real_escape_string($source);
 
   if (isset($_COOKIE["submitted"])) {
     echo "Please wait to submit another fact.";
